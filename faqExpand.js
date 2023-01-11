@@ -7,9 +7,7 @@ faqTitles.forEach((faqTitle, faqTitleIndex) => {
 });
 
 function faqExpand(showIndex) {
-	for (let faqItem of faqItems) {
-		faqItem.classList.remove("faqShown");
-	}
+	faqItems.forEach((faqItem) => faqItem.classList.remove("faqShown"));
 
 	setTimeout(
 		() => {
