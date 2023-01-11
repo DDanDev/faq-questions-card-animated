@@ -1,13 +1,10 @@
-const faqItems = document.getElementsByClassName("faqItem");
-const faqTitles = document.getElementsByClassName("faqTitle");
+const faqItems = document.querySelectorAll(".faqItem");
+const faqTitles = document.querySelectorAll(".faqTitle");
 let faqShown = null;
 
-for (let faqTitleIndex in faqTitles) {
-	if (isNaN(Number(faqTitleIndex))) break;
-	faqTitles[faqTitleIndex].addEventListener("click", (e) => {
-		faqExpand(faqTitleIndex);
-	});
-}
+faqTitles.forEach((faqTitle, faqTitleIndex) => {
+	faqTitle.addEventListener("click", () => faqExpand(faqTitleIndex));
+});
 
 function faqExpand(showIndex) {
 	for (let faqItem of faqItems) {
