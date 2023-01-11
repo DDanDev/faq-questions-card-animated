@@ -12,3 +12,6 @@ If answer is long, or if there are many questions, scrollbar will appear.
 
 Set p max-height and container height in css according to design and length of content.
 
+## Known Issues
+
+Not responsive to screen size. This repo is mostly for the javascript, but will soon make the css responsive with the current design.
